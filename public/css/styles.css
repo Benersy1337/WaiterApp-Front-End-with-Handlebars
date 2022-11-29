@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: GeneralSans, sans-serif;
+}
+
+body {
+  background: #fafafa;
+  color: #333;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+}
+
+#topo {
+  background: #D73035;
+  display: flex;
+  justify-content: center;
+  height: 198px;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  max-width: 1216px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1,
+h2 {
+  color: #fff;
+}
+
+.img-pedido {
+  width: 70px;
+  height: 50px;
+  border-radius: 1rem;
+}
+
+.button-cadastro{
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+.button-cadastro:hover{
+  background: black;
+  color: white;
+}
+
+.button-enviar{
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background: green;
+  color: black;
+  border: none;
+}
+
+.button-enviar:hover{
+  background: black;
+  color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 1216px;
+    margin: 40px auto;
+    display: flex;
+    gap: 32px;
+}
+
+.container-cadastro{
+  display: flex;
+  flex-direction: row;
+}
+
+.board {
+    padding: 16px;
+    border: 1px solid rgba(204,204,204,0.4);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.board-pedidos {
+  padding: 16px;
+  border: 1px solid rgba(204,204,204,2);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.header-board {
+  padding: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+

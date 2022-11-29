@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <title>Waiter App</title>
+
+  <link href="../css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header id="topo">
+    <a href="/cursos"><button class="button-cadastro"><strong>Cadastrar Pedido</strong></button></a>
+    <div class="container">
+
+      <div class="content">
+        
+
+          <div class="page-details">
+            <h1>Pedidos</h1>
+            <h2>Acompanhe os Pedidos dos Clientes</h2>
+          </div>
+
+          <img src="../img/logo.svg" alt="WAITERAPP" />
+
+        </div>
+
+    </div>
+    
+  </header>
+
+  <div class="container">
+    <div class="board">
+      <header class="header-board">⏰</header>
+      <strong>Aguardando</strong>
+      <span>(1)</span>
+      <br>
+        <a name="cursos"></a>
+        <div class="row  justify-content-center">
+          {{#each cursos}}
+          <div class="board-pedidos">
+              <div class="card">
+                <img class="img-pedido" src="../img/products/{{this.imagem}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{this.nome}}</h5>
+                  <p class="card-text">{{this.resumo}}</p>
+                  <button class="button-enviar"><strong>Enviar para Produção</strong></button>
+                </div>
+              </div> 
+            </div> 
+          {{/each}}
+        </div>
+    </div>
+
+    <div class="board">
+      <header class="header-board">👨🏻‍🍳</header>
+      <strong>Em Produção</strong>
+      <span>(2)</span>
+    </div>
+
+    <div class="board">
+      <header class="header-board">✅</header>
+      <strong>Concluído</strong>
+      <span>(3)</span>
+    </div>
+
+  </div>
+    
+  
+
+
+</body>
+</html>

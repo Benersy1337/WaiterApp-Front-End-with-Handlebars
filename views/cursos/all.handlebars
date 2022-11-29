@@ -1,0 +1,48 @@
+<header id="topo">
+
+  <a href="/site"><button class="button-cadastro"><strong>Voltar</strong></button></a>
+  
+  <div class="container">
+
+    <div class="content">
+      
+
+        <div class="page-details">
+          <h1>Cadastro</h1>
+          <h2>Cadastre os Pedidos dos Clientes</h2>
+        </div>
+
+        <img src="../img/logo.svg" alt="WAITERAPP" />
+
+      </div>
+
+  </div>
+  
+</header>
+<div class="container-cadastro">
+  <div class="board">
+    <header class="header-board">⏰</header>
+    <a href="/cursos/create" class="button">Novo</a>
+    <br>
+      <a name="cursos"></a>
+      <div class="row  justify-content-center">
+        {{#each cursos}}
+        <div class="board-pedidos">
+            <div class="card">
+              <img class="img-pedido" src="../img/products/{{this.imagem}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{this.nome}}</h5>
+                <p class="card-text">{{this.resumo}}</p>
+                <div class="actions">
+                  <a href="/cursos/{{this._id}}" class="button">Detalhes</a>
+                  <a href="/cursos/edit/{{this._id}}" class="button">Editar</a>
+                </div>
+              </div>
+            </div> 
+          </div> 
+        {{/each}}
+      </div>
+  </div>
+</div>
+    
+ 

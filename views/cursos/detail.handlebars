@@ -1,0 +1,10 @@
+<div class="item-page">
+  <a href="/cursos">Voltar</a>
+  <h1>{{curso.nome}}</h1>
+  <p>Pedido: {{curso.resumo}}</p>
+  <img src="/img/products/{{curso.imagem}}" alt="{{curso.nome}}">
+  <p>Descrição: {{curso.descricao}}</p>
+  <form action="/cursos/remove/{{curso._id}}" method="POST">
+    <input type="submit" class="button" value="Excluir">
+  </form>
+</div>

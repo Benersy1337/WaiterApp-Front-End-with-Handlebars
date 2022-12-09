@@ -10,13 +10,13 @@ const storage = multer.diskStorage({
       // Extração da extensão do arquivo original:
       const extensaoArquivo = file.originalname.split('.')[1];
 
-      // Cria um código randômico que será o nome do arquivo
-      const novoNomeArquivo = require('crypto')
+      // Cria um código randômico que será o mesa do arquivo
+      const novoMesaArquivo = require('crypto')
           .randomBytes(64)
           .toString('hex');
 
-      // Indica o novo nome do arquivo:
-      cb(null, `${novoNomeArquivo}.${extensaoArquivo}`)
+      // Indica o novo mesa do arquivo:
+      cb(null, `${novoMesaArquivo}.${extensaoArquivo}`)
   }
 });
 

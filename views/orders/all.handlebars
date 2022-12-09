@@ -1,12 +1,12 @@
 <div class="container-cadastro">
-  <div class="board">
-    <a href="/cursos/create" class="button btn btn-success">Novo Pedido</a>
+  <div class="board-orders">
+    <a href="/orders/create" class="button btn btn-success">Novo Pedido</a>
     <br />
-    <a name="cursos"></a>
+    <a name="orders"></a>
     <div class="row justify-content-center">
-      {{#each cursos}}
+      {{#each orders}}
         <div class="board-pedidos">
-          <div class="card">
+          <div class="item-page">
             <img
               class="img-pedido"
               src="../img/products/{{this.imagem}}"
@@ -14,12 +14,12 @@
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">Mesa {{this.nome}}</h5>
-              <p class="card-text">Pedido {{this.resumo}}</p>
+              <h5 class="card-title">Mesa {{this.mesa}}</h5>
+              <p class="card-text">Pedido {{this.pedido}}</p>
               <div class="actions">
-                <a href="/cursos/{{this._id}}" class="button-modal">Detalhes</a>
+                <a href="/orders/{{this._id}}" class="button-modal">Detalhes</a>
                 <a
-                  href="/cursos/edit/{{this._id}}"
+                  href="/orders/edit/{{this._id}}"
                   class="button-modal"
                 >Editar</a>
               </div>
@@ -30,3 +30,4 @@
     </div>
   </div>
 </div>
+

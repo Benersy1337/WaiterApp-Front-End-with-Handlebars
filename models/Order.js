@@ -1,15 +1,15 @@
 const mongoose = require('../db/conn')
 const { Schema } = mongoose
 
-const Curso = mongoose.model(
-  'Curso',
+const Order = mongoose.model(
+  'Order',
   new Schema({
-    nome: {
-      type: String,
+    mesa: {
+      type: Number,
       required: true,
     },
-    resumo: {
-      type: String,
+    pedido: {
+      type: Number,
       required: true,
     },
     descricao: {
@@ -23,4 +23,4 @@ const Curso = mongoose.model(
   }),
 )
 
-module.exports = Curso
+module.exports = Order

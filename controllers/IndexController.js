@@ -1,13 +1,13 @@
-const Curso = require('../models/Curso')
+const Order = require('../models/Order')
 const mongoose = require('mongoose')
 
 
 module.exports = class IndexController {
   
   static async mostrarIndex(req, res) {
-    const cursos = await Curso.find({}).lean()
+    const orders = await Order.find({}).lean()
     
 
-    res.render('site/index', {layout: false, cursos })
+    res.render('site/index', {layout: false, orders })
   }
 }

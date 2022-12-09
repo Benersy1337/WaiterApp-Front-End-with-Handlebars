@@ -1,42 +1,42 @@
-<h1>Editar Curso</h1>
-<form action="/cursos/edit" method="POST" enctype="multipart/form-data">
+<h1>Editar Order</h1>
+<form action="/orders/edit" method="POST" enctype="multipart/form-data">
     <div class="card-parciais item-page">
 
             <img
-                src="/img/products/{{curso.imagem}}"
+                src="/img/products/{{order.imagem}}"
                 class="img-detail"
-                alt="{{curso.nome}}"
+                alt="{{order.mesa}}"
             />
 
             <div class="card-body">
 
                 <div class="form-group">
 
-                <input type="hidden" name="id" value={{curso._id}} />
+                <input type="hidden" name="id" value={{order._id}} />
 
-                <label for="nome">Nome da Mesa:</label>
+                <label for="mesa">Mesa da Mesa:</label>
                 <input
-                type="text"
-                name="nome"
+                type="number"
+                name="mesa"
                 placeholder="Digite o número da Mesa"
-                value="{{curso.nome}}"
+                value="{{order.mesa}}"
                 />
 
             </div>
 
             <div class="form-group">
-                <label for="resumo">Resumo:</label>
+                <label for="pedido">Pedido:</label>
                 <input
-                type="text"
-                name="resumo"
+                type="number"
+                name="pedido"
                 placeholder="Digite o número do Pedido"
-                value="{{curso.resumo}}"
+                value="{{order.pedido}}"
                 />
             </div>
 
             <div class="form-group">
                 <label for="descricao">Descrição:</label>
-                <input name="descricao" value="{{curso.descricao}}" placeholder="Digite o nome do Pedido"></input>
+                <input name="descricao" value="{{order.descricao}}" placeholder="Digite o mesa do Pedido"></input>
             </div>
 
             <div class="form-group">
@@ -49,7 +49,7 @@
             
             <div class="buttons-detail">
 
-                <a href="/cursos" class="btn btn-primary voltar">Voltar</a>
+                <a href="/orders" class="btn btn-primary voltar">Voltar</a>
 
                 <input type="submit" class="btn btn-primary button" value="Salvar" />
             

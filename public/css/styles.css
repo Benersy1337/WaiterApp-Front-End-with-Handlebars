@@ -11,7 +11,7 @@ body {
 }
 
 button {
-  cursor: pointer;
+  orderr: pointer;
   font-size: 1rem;
   color: #333;
  
@@ -155,12 +155,33 @@ h2 {
 }
 
 .card-parciais {
-  /* min-width: 24.7rem; */
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0,0,0,.125);
   border-radius: 1rem;
+  width: 24.6rem;
 }
 
+.board-orders{
+  padding: 16px;
+  border: 1px solid rgba(204,204,204,0.4);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 
+.justify-content-center {
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.btn-success{
+  width: 10rem;
+}
+
+.button-modal:hover{
+  color: white;
+  text-decoration: none;
+}

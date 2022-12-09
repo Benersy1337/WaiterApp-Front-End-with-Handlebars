@@ -2,7 +2,7 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 
 
-const cursosRoutes = require('./routes/cursosRoutes')
+const ordersRoutes = require('./routes/ordersRoutes')
 const siteRoutes = require('./routes/siteRoutes')
 
 const app = express()
@@ -22,10 +22,10 @@ app.use(express.json())
 
 app.use(express.static('public'))
 
-app.use('/cursos', cursosRoutes)
+app.use('/orders', ordersRoutes)
 app.use('/site', siteRoutes)
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}/site`);
-  });
+});
 

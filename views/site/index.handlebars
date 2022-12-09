@@ -17,7 +17,7 @@
 <body>
 
   <header id="topo">
-    <a href="/cursos"><button class="button-cadastro"><strong>Editar Pedidos</strong></button></a>
+    <a href="/orders"><button class="button-cadastro"><strong>Editar Pedidos</strong></button></a>
     <div class="container">
 
       <div class="content">
@@ -41,16 +41,17 @@
       <header class="header-board">⏰</header>
       <strong>Aguardando</strong>
       <span>(3)</span>
+      <span>{{CountPedidos}}</span>
       <br>
-        <a name="cursos"></a>
+        <a name="orders"></a>
         <div class="row  justify-content-center" id="pedidos">
-          {{#each cursos}}
+          {{#each orders}}
           <div class="board-pedidos">
               <div class="card">
                 <img class="img-pedido" src="../img/products/{{this.imagem}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Mesa {{this.nome}}</h5>
-                  <p class="card-text">Pedido {{this.resumo}}</p>
+                  <h5 class="card-title">Mesa {{this.mesa}}</h5>
+                  <p class="card-text">Pedido {{this.pedido}}</p>
                   <button class="button-enviar"><strong>Enviar para Produção</strong></button>
                 </div>
               </div> 
@@ -74,28 +75,17 @@
   </div>
 
   
-
   <script>
 
-    const enviaProducao = document.getElementsByClassName('button-enviar');
-    const divAguardando = document.getElementById('pedidos');
+    const pedidos = document.querySelectorAll(".board-pedidos");
 
+    CountPedidos = pedidos.length;
 
-    enviaProducao.addEventListener('click', () => {
-      if(divAguardando.style.display === 'none') {
-        divAguardando.style.display = 'block';
-        enviaProducao.innerHtml = 'Concluido';
-      } else {
-        divAguardando.style.display = 'none';
-
-      }
-    });
-
+    console.log(CountPedidos);
 
   </script>
-    
+
   
-
-
+  
 </body>
 </html>

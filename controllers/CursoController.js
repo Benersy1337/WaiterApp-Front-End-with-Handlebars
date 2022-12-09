@@ -16,6 +16,7 @@ module.exports = class CursoController {
     res.render('cursos/create')
   }
 
+ 
   static async criarCursoPost(req, res) {
 
     const nome = req.body.nome
@@ -23,6 +24,7 @@ module.exports = class CursoController {
     const descricao = req.body.descricao
 
     const imagem = req.file.filename
+
     const curso = new Curso({ nome, resumo, descricao, imagem })
 
     await curso.save()

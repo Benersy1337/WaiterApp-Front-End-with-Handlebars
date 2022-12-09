@@ -11,12 +11,13 @@
   <title>Waiter App</title>
 
   <link href="../css/styles.css" rel="stylesheet">
+
 </head>
 
 <body>
 
   <header id="topo">
-    <a href="/cursos"><button class="button-cadastro"><strong>Cadastrar Pedido</strong></button></a>
+    <a href="/cursos"><button class="button-cadastro"><strong>Editar Pedidos</strong></button></a>
     <div class="container">
 
       <div class="content">
@@ -39,17 +40,17 @@
     <div class="board">
       <header class="header-board">⏰</header>
       <strong>Aguardando</strong>
-      <span>(1)</span>
+      <span>(3)</span>
       <br>
         <a name="cursos"></a>
-        <div class="row  justify-content-center">
+        <div class="row  justify-content-center" id="pedidos">
           {{#each cursos}}
           <div class="board-pedidos">
               <div class="card">
                 <img class="img-pedido" src="../img/products/{{this.imagem}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">{{this.nome}}</h5>
-                  <p class="card-text">{{this.resumo}}</p>
+                  <h5 class="card-title">Mesa {{this.nome}}</h5>
+                  <p class="card-text">Pedido {{this.resumo}}</p>
                   <button class="button-enviar"><strong>Enviar para Produção</strong></button>
                 </div>
               </div> 
@@ -71,6 +72,27 @@
     </div>
 
   </div>
+
+  
+
+  <script>
+
+    const enviaProducao = document.getElementsByClassName('button-enviar');
+    const divAguardando = document.getElementById('pedidos');
+
+
+    enviaProducao.addEventListener('click', () => {
+      if(divAguardando.style.display === 'none') {
+        divAguardando.style.display = 'block';
+        enviaProducao.innerHtml = 'Concluido';
+      } else {
+        divAguardando.style.display = 'none';
+
+      }
+    });
+
+
+  </script>
     
   
 

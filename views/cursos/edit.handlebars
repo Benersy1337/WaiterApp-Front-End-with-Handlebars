@@ -1,21 +1,60 @@
 <h1>Editar Curso</h1>
 <form action="/cursos/edit" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="id" value={{curso._id}}>
-    <div class="form-control">
-        <label for="nome">Nome do curso:</label>
-        <input type="text" name="nome" placeholder="Digite o nome do curso" value="{{curso.nome}}">
+    <div class="card-parciais item-page">
+
+            <img
+                src="/img/products/{{curso.imagem}}"
+                class="img-detail"
+                alt="{{curso.nome}}"
+            />
+
+            <div class="card-body">
+
+                <div class="form-group">
+
+                <input type="hidden" name="id" value={{curso._id}} />
+
+                <label for="nome">Nome da Mesa:</label>
+                <input
+                type="text"
+                name="nome"
+                placeholder="Digite o número da Mesa"
+                value="{{curso.nome}}"
+                />
+
+            </div>
+
+            <div class="form-group">
+                <label for="resumo">Resumo:</label>
+                <input
+                type="text"
+                name="resumo"
+                placeholder="Digite o número do Pedido"
+                value="{{curso.resumo}}"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="descricao">Descrição:</label>
+                <input name="descricao" value="{{curso.descricao}}" placeholder="Digite o nome do Pedido"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="imagem">Imagem:</label>
+                <input type="file" name="imagem" />
+            </div>
+
+                
+            
+            
+            <div class="buttons-detail">
+
+                <a href="/cursos" class="btn btn-primary voltar">Voltar</a>
+
+                <input type="submit" class="btn btn-primary button" value="Salvar" />
+            
+            </div>
+
+        
     </div>
-    <div class="form-control">
-        <label for="resumo">Resumo:</label>
-        <textarea name="resumo">{{curso.resumo}}</textarea>
-    </div>
-    <div class="form-control">
-        <label for="descricao">Descrição:</label>
-        <textarea name="descricao">{{curso.descricao}}</textarea>
-    </div>
-    <div class="form-control">
-        <label for="imagem">Imagem:</label>
-        <input type="file" name="imagem"/>
-    </div>
-    <input type="submit" class="button" value="Salvar">
 </form>

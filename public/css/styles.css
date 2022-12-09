@@ -14,6 +14,7 @@ button {
   cursor: pointer;
   font-size: 1rem;
   color: #333;
+ 
 }
 
 #topo {
@@ -58,13 +59,13 @@ h2 {
 .button-enviar{
   padding: 0.5rem;
   border-radius: 1rem;
-  background: green;
-  color: black;
+  background: rgb(255, 0, 0);
+  color: white;
   border: none;
 }
 
 .button-enviar:hover{
-  background: black;
+  background: green;
   color: white;
 }
 
@@ -101,6 +102,7 @@ h2 {
   flex: 1;
   line-height: 2rem;
   margin-bottom: 1rem;
+  justify-content: center;
 }
 
 .header-board {
@@ -110,4 +112,55 @@ h2 {
   align-items: center;
   gap: 8px;
 }
+
+.button-modal {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background: rgb(255, 0, 0);
+  color: white;
+  border: none;
+  text-decoration: none;
+}
+
+.button-modal:hover{
+ background: green;
+}
+
+.img-detail{
+  border-radius: 1rem;
+}
+
+.buttons-detail{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.buttons-detail .voltar{
+  background: green;
+  border: none;
+}
+
+.buttons-detail .voltar:hover{
+  background: #005f00;
+}
+
+.buttons-detail .excluir{
+  background: red;
+  border: none;
+}
+
+.buttons-detail .excluir:hover{
+  background: #7f0000;
+}
+
+.card-parciais {
+  /* min-width: 24.7rem; */
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 1rem;
+}
+
 

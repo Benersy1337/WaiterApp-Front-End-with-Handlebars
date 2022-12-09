@@ -1,20 +1,54 @@
 <h1>Criar Curso</h1>
 <form action="/cursos/create" method="POST" enctype="multipart/form-data">
-    <div class="form-control">
-        <label for="nome">Nome da Mesa:</label>
-        <input type="text" name="nome" placeholder="Digite o nome do curso">
+    <div class="card-parciais item-page">
+
+            <div class="card-body">
+
+                <div class="form-group">
+
+                <input type="hidden" name="id" value={{curso._id}} />
+
+                <label for="nome">Nome da Mesa:</label>
+                <input
+                type="text"
+                name="nome"
+                placeholder="Digite o número da Mesa"
+                value="{{curso.nome}}"
+                />
+
+            </div>
+
+            <div class="form-group">
+                <label for="resumo">Resumo:</label>
+                <input
+                type="text"
+                name="resumo"
+                placeholder="Digite o número do Pedido"
+                value="{{curso.resumo}}"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="descricao">Descrição:</label>
+                <input name="descricao" value="{{curso.descricao}}" placeholder="Digite o nome do Pedido"></input>
+            </div>
+
+            <div class="form-group">
+                <label for="imagem">Imagem:</label>
+                <input type="file" name="imagem" />
+            </div>
+
+                
+            
+            
+            <div class="buttons-detail">
+
+                <a href="/cursos" class="btn btn-primary voltar">Voltar</a>
+
+                <input type="submit" class="btn btn-primary button" value="Criar" />
+            
+            </div>
+
+        
     </div>
-    <div class="form-control">
-        <label for="resumo">Pedido:</label>
-        <textarea name="resumo"></textarea>
-    </div>
-    <div class="form-control">
-        <label for="descricao">Descrição:</label>
-        <textarea name="descricao"></textarea>
-    </div>
-    <div class="form-control">
-        <label for="imagem">Imagem:</label>
-        <input type="file" name="imagem"/>
-    </div>
-    <input type="submit" class="button" value="Criar">
 </form>
